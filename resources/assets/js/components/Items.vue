@@ -1,13 +1,14 @@
 <template>
-    <div id="main">
+    <div class="inner-pages">
         <h2>probrando vue2</h2>
         <router-link to="/home2">HOME 2</router-link>
-        <form v-on:submit.prevent="createItem">
-            <div class="input-group">
-                <input type="text" class="form-control input-sm" v-model="newItem" maxlength="255">
-                <span class="input-group-btn">
-                    <input type="submit" class="btn btn-primary btn-sm" value="agregar">
-                </span>
+        <router-link to="/home3">HOME 3</router-link>
+        <form v-on:submit.prevent="createItem">  
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" v-model="newItem" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="button-addon2">Agregar</button>
+              </div>
             </div>
         </form>
         <div class="input-group">

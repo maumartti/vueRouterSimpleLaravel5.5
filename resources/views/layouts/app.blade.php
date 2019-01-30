@@ -1,80 +1,66 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
+    <meta charset="UTF-8">
+    <base href="/" target="_blank">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="html 5 template">
+    <meta name="author" content="">
+    <title>Find Houses - HTML5 Template</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+    <!-- START SECTION HEADINGS -->
+    <div class="header">
+ 
+        <div class="header-bottom heading sticky-header" id="heading">
             <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                <a href="index.html" class="logo">
+                    <img src="images/logoCasas.png" alt="casas online Uruguay">
+                </a>
+                <button type="button" class="search-button" data-toggle="collapse" data-target="#bloq-search" aria-expanded="false">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                <div class="get-quote hidden-lg-down">
+                    <a href="submit-property.html">
+                        <p>Publicar</p>
                     </a>
                 </div>
+                <button type="button" class="button-menu hidden-lg-up" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
+                <form action="#" id="bloq-search" class="collapse">
+                    <div class="bloq-search">
+                        <input type="text" placeholder="search...">
+                        <input type="submit" value="Search">
+                    </div>
+                </form>
+
+                <nav id="main-menu" class="collapse">
+                    <ul>
+                        <li><a href="contact-us.html">Casas</a></li>
+                        <li><a href="contact-us.html">Apartamentos</a></li>
+                        <li><a href="contact-us.html">Campos</a></li>
+                        <li><a href="contact-us.html">Comercios</a></li>
+                        <li><a href="contact-us.html">Blog</a></li>
+                        <li><a href="contact-us.html">Contacto</a></li>
                     </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+                </nav>
             </div>
-        </nav>
+        </div>
+    </div>
 
         @yield('content')
-    </div>
+    
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

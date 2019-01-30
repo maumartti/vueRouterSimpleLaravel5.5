@@ -1,13 +1,18 @@
 
+
+/** compilamos solo achivos SCSS y los mandamos a app.css por medio de larabel.mix*/
+
+
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800");
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
 
 //toastr
 
-@import "~toastr/build/toastr.css";
+@import "~toastr/build/toastr";

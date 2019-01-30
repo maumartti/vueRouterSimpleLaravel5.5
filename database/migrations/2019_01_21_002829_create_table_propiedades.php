@@ -18,6 +18,7 @@ class CreateTablePropiedades extends Migration
             $table->string('titulo');
             $table->string('operacion');
             $table->string('precio');
+            $table->tinyint('ocultaPrecio', 1);
             $table->string('financia');
             $table->string('propiedad');
             $table->string('direccion');
